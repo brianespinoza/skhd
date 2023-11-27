@@ -1,4 +1,4 @@
-# rotate layout clockwise
+#  rotate layout clockwise
 shift + alt - r : yabai -m space --rotate 270
 
 
