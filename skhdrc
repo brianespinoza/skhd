@@ -42,10 +42,10 @@ fn - m : yabai -m window --toggle zoom-fullscreen
 fn - e : yabai -m space --balance
 
 ## Move the vertical divider to the left (making the right window narrower)
-alt - l : yabai -m query --windows --space | jq -r 'map(select(.minimized == 0)) | max_by(.frame.x + .frame.w) | .id' | xargs -I{} yabai -m window --focus {}; yabai -m window --resize left:20:0
+fn + alt - l : yabai -m query --windows --space | jq -r 'map(select(.minimized == 0)) | max_by(.frame.x + .frame.w) | .id' | xargs -I{} yabai -m window --focus {}; yabai -m window --resize left:20:0
 
 ## Move the vertical divider to the right (making the right window wider)
-alt - h : yabai -m query --windows --space | jq -r 'map(select(.minimized == 0)) | max_by(.frame.x + .frame.w) | .id' | xargs -I{} yabai -m window --focus {}; yabai -m window --resize left:-20:0
+fn + alt - h : yabai -m query --windows --space | jq -r 'map(select(.minimized == 0)) | max_by(.frame.x + .frame.w) | .id' | xargs -I{} yabai -m window --focus {}; yabai -m window --resize left:-20:0
 
 
 # custom script: move current window to your secondary display
